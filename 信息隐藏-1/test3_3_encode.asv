@@ -1,0 +1,21 @@
+function [r]=test3_3_encode(imgpath,filepath,key)
+   
+    fid=fopen(filepath,'r');
+    [A,B]=fread(fid,'ubit1')
+    fclose(fid);
+    
+    data=rgb2gray(imread(imgpath));
+    data=double(data);
+    [m,n]=size(data);
+    if B>m*n
+        error("信息数量过长")
+    end
+
+    p=1;
+
+    [x,y]=randinterval(data,B,key);
+    
+
+    
+
+end

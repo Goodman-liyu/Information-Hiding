@@ -1,0 +1,27 @@
+function [x,y]=randinterval(data,length,key)
+
+    rand('seed',key);
+    a=rand(length);
+
+    x=zeros(1,length);
+    y=zeros(1,length);
+
+    tx=1;
+    ty=1;
+
+    x(1)=tx;
+    y(1)=ty;
+
+    for i=2:length
+        
+        if a(i)>0.5
+            c=c+interval1;
+        end
+
+
+
+
+    end
+
+
+end
